@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/customerListragment">
+
+    <fragment
+        android:id="@+id/customerListragment"
+        android:name="com.elmaddinasger.customerregister.CustomerListragment"
+        android:label="fragment_customer_listragment"
+        tools:layout="@layout/fragment_customer_listragment" >
+        <action
+            android:id="@+id/action_customerListragment_to_addCountryFragment"
+            app:destination="@id/addCountryFragment" />
+        <action
+            android:id="@+id/action_customerListragment_to_addCustomerFragment"
+            app:destination="@id/addCustomerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCountryFragment"
+        android:name="com.elmaddinasger.customerregister.AddCountryFragment"
+        android:label="fragment_add_country"
+        tools:layout="@layout/fragment_add_country" />
+    <fragment
+        android:id="@+id/addCustomerFragment"
+        android:name="com.elmaddinasger.customerregister.AddCustomerFragment"
+        android:label="fragment_add_customer"
+        tools:layout="@layout/fragment_add_customer" />
+</navigation>
